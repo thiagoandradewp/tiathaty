@@ -307,6 +307,50 @@ a:focus-visible, button:focus-visible{outline:3px solid var(--gold-dark); outlin
 .callout .btn{background:var(--navy); color:#fff; box-shadow:none;}
 .callout .btn:hover{background:var(--navy-2);}
 
+/* ============ A domicílio ============ */
+.domicilio{background:var(--sky); padding:80px 0;}
+.domicilio-inner{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;}
+.eyebrow{
+  display:inline-block; margin-bottom:.8rem;
+  font-weight:800; font-size:.85rem; letter-spacing:.04em; text-transform:uppercase;
+  color:var(--gold-dark);
+}
+.domicilio h2{font-size:clamp(1.6rem, 3vw, 2.1rem);}
+.domicilio-text p{color:var(--ink-soft);}
+.domicilio-text .btn{margin-top:.4rem;}
+.domicilio-list{list-style:none; margin:0; padding:0; display:grid; gap:14px;}
+.domicilio-list li{
+  display:flex; gap:.9rem; align-items:flex-start;
+  background:#fff; border-radius:var(--radius-md);
+  padding:18px 20px;
+  box-shadow:0 10px 24px -18px rgba(22,38,77,0.4);
+}
+.domicilio-list li > span{font-size:1.5rem; line-height:1.2;}
+.domicilio-list strong{display:block; font-family:var(--font-display); color:var(--navy);}
+.domicilio-list div span{color:var(--ink-soft); font-size:.95rem;}
+
+/* ============ Dúvidas ============ */
+.faq{padding:72px 0 16px;}
+.faq h2{font-size:clamp(1.6rem, 3vw, 2.1rem); text-align:center; margin-bottom:1.6rem;}
+.faq-list{max-width:760px; margin:0 auto; display:grid; gap:12px;}
+.faq details{
+  background:#fff; border-radius:var(--radius-sm);
+  border:1px solid rgba(22,38,77,0.1);
+  padding:0 20px;
+}
+.faq summary{
+  cursor:pointer; list-style:none;
+  padding:18px 28px 18px 0; position:relative;
+  font-family:var(--font-display); font-weight:600; color:var(--navy);
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{
+  content:"+"; position:absolute; right:0; top:50%; transform:translateY(-50%);
+  font-size:1.4rem; color:var(--gold-dark); transition:transform .2s ease;
+}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq details p{color:var(--ink-soft); margin:0 0 18px;}
+
 /* ============ Como começar ============ */
 .steps{padding:80px 0;}
 .steps h2{font-size:clamp(1.6rem, 3vw, 2.1rem); text-align:center; margin-bottom:.3em;}
@@ -423,7 +467,7 @@ a:focus-visible, button:focus-visible{outline:3px solid var(--gold-dark); outlin
 .whatsapp-float.is-hidden{opacity:0; transform:translateY(16px); pointer-events:none;}
 
 /* ============ Responsive ============ */
-@media (max-width:900px){
+@media (max-width:1080px){
   .main-nav{
     position:absolute; top:100%; left:0; right:0;
     background:var(--cream);
@@ -441,7 +485,11 @@ a:focus-visible, button:focus-visible{outline:3px solid var(--gold-dark); outlin
   .main-nav a.is-active{color:var(--gold-dark);}
   .header-cta{margin-left:auto;}
   .nav-toggle{display:flex; margin-left:.25rem;}
+}
+
+@media (max-width:900px){
   .step-list{grid-template-columns:1fr; max-width:480px; margin:0 auto;}
+  .domicilio-inner{grid-template-columns:1fr; gap:32px;}
   .hero-inner{grid-template-columns:1fr; text-align:center;}
   .hero h1{max-width:none; margin-left:auto; margin-right:auto;}
   .lede{margin-left:auto; margin-right:auto;}
