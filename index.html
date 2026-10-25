@@ -8,15 +8,45 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="assets/logo.png" type="image/png">
+<meta name="theme-color" content="#16264D">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Tia Thaty · Reforço Escolar">
+<meta property="og:title" content="Tia Thaty · Reforço Escolar">
+<meta property="og:description" content="Reforço escolar individual do Infantil 4 ao 3º ano Fundamental. Aulas online e presenciais na Madalena e bairros próximos.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/foto-thaty.webp" type="image/webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Tia Thaty · Reforço Escolar",
+  "description": "Reforço escolar individual do Infantil 4 ao 3º ano do Ensino Fundamental, com aulas online e presenciais a domicílio.",
+  "image": "assets/foto-thaty.jpg",
+  "logo": "assets/logo.png",
+  "telephone": "+55 87 98854-0760",
+  "areaServed": "Madalena e bairros próximos",
+  "sameAs": ["https://www.instagram.com/tiathaty_"]
+}
+</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
 <header class="site-header">
   <div class="wrap header-inner">
-    <a href="#topo" class="brand">
-      <img src="assets/logo.png" alt="Logo Reforço Escolar Tia Thaty" class="brand-logo" width="44" height="44">
+    <a href="#conteudo" class="brand">
+      <picture>
+        <source srcset="assets/logo-160.webp" type="image/webp">
+        <img src="assets/logo-160.png" alt="Logo Reforço Escolar Tia Thaty" class="brand-logo" width="44" height="44">
+      </picture>
       <span class="brand-text">
         <strong>Tia Thaty</strong>
         <em>reforço escolar</em>
@@ -25,7 +55,8 @@
 
     <nav class="main-nav" id="mainNav">
       <a href="#beneficios">Benefícios</a>
-      <a href="#modalidades">Como funciona</a>
+      <a href="#modalidades">Aulas</a>
+      <a href="#como-comecar">Como começar</a>
       <a href="#contato">Contato</a>
       <a href="https://www.instagram.com/tiathaty_" target="_blank" rel="noopener" class="nav-social" aria-label="Instagram Tia Thaty">
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
@@ -39,7 +70,7 @@
 
     <a class="btn btn-primary btn-small header-cta" data-whatsapp
        data-msg="Oi, Tia Thaty! Vi o site e queria saber mais sobre o reforço escolar."
-       href="#">Falar no WhatsApp</a>
+       href="https://wa.me/5587988540760?text=Oi%2C%20Tia%20Thaty%21%20Vi%20o%20site%20e%20queria%20saber%20mais%20sobre%20o%20refor%C3%A7o%20escolar." target="_blank" rel="noopener">Falar no WhatsApp</a>
 
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
       <span></span><span></span><span></span>
@@ -47,7 +78,7 @@
   </div>
 </header>
 
-<main id="topo">
+<main id="conteudo">
 
   <section class="hero">
     <div class="wrap hero-inner">
@@ -63,8 +94,8 @@
         <div class="hero-actions">
           <a class="btn btn-primary" data-whatsapp
              data-msg="Oi, Tia Thaty! Vi o site e queria saber mais sobre o reforço escolar."
-             href="#">Falar no WhatsApp</a>
-          <a class="btn btn-ghost" href="#modalidades">Ver como funciona</a>
+             href="https://wa.me/5587988540760?text=Oi%2C%20Tia%20Thaty%21%20Vi%20o%20site%20e%20queria%20saber%20mais%20sobre%20o%20refor%C3%A7o%20escolar." target="_blank" rel="noopener">Falar no WhatsApp</a>
+          <a class="btn btn-ghost" href="#modalidades">Conhecer as aulas</a>
         </div>
 
         <p class="hero-note">📍 Atendimento na Madalena e bairros próximos · (87) 98854-0760</p>
@@ -78,7 +109,10 @@
           Aprender pode ser <em>leve</em><br>e até <em>divertido!</em>
         </div>
 
-        <img src="assets/foto-thaty.jpg" alt="Thaty, professora do reforço escolar Tia Thaty, sorrindo de óculos e camiseta azul-marinho com a logo Tia Thaty" class="hero-photo" width="559" height="785">
+        <picture>
+          <source srcset="assets/foto-thaty.webp" type="image/webp">
+          <img src="assets/foto-thaty.jpg" alt="Thaty, professora do reforço escolar Tia Thaty, sorrindo de óculos e camiseta azul-marinho com a logo Tia Thaty" class="hero-photo" width="559" height="785" fetchpriority="high">
+        </picture>
       </div>
     </div>
   </section>
@@ -87,23 +121,23 @@
     <div class="wrap">
       <h2>O que muda pro seu filho</h2>
       <div class="benefit-grid">
-        <article class="benefit-card">
-          <span class="benefit-icon" style="background:#FFF3DA">💡</span>
+        <article class="benefit-card reveal">
+          <span class="benefit-icon icon-gold" aria-hidden="true">💡</span>
           <h3>Mais foco e concentração</h3>
           <p>Atividades pensadas pro ritmo da criança, sem pressa e sem sobrecarga.</p>
         </article>
-        <article class="benefit-card">
-          <span class="benefit-icon" style="background:#E4F0FF">📖</span>
+        <article class="benefit-card reveal">
+          <span class="benefit-icon icon-blue" aria-hidden="true">📖</span>
           <h3>Melhor desempenho nas atividades</h3>
           <p>Reforço na leitura, na escrita e nas tarefas do dia a dia da escola.</p>
         </article>
-        <article class="benefit-card">
-          <span class="benefit-icon" style="background:#FFE7EC">💙</span>
+        <article class="benefit-card reveal">
+          <span class="benefit-icon icon-pink" aria-hidden="true">💙</span>
           <h3>Apoio individualizado e acolhedor</h3>
           <p>Cada criança é ouvida e acompanhada do seu próprio jeito de aprender.</p>
         </article>
-        <article class="benefit-card">
-          <span class="benefit-icon" style="background:#EAF7EE">⭐</span>
+        <article class="benefit-card reveal">
+          <span class="benefit-icon icon-green" aria-hidden="true">⭐</span>
           <h3>Confiança e autonomia para aprender</h3>
           <p>O objetivo não é só a tarefa de hoje — é a criança acreditar que consegue.</p>
         </article>
@@ -117,12 +151,12 @@
       <p class="section-lede">Atendimento individualizado, combinado direto com a família.</p>
 
       <div class="mode-grid">
-        <article class="mode-card mode-online">
+        <article class="reveal mode-card mode-online">
           <span class="mode-icon" aria-hidden="true">💻</span>
           <h3>Aulas online</h3>
           <p>Comodidade e flexibilidade para aprender de onde estiver.</p>
         </article>
-        <article class="mode-card mode-presencial">
+        <article class="reveal mode-card mode-presencial">
           <span class="mode-icon" aria-hidden="true">🏠</span>
           <h3>Aulas presenciais</h3>
           <p>Atendimento a domicílio, com conforto, segurança e atenção total.</p>
@@ -143,32 +177,56 @@
         <span>Consulte via WhatsApp ou Direct — cada plano é montado pra sua necessidade.</span>
         <a class="btn btn-primary btn-small" data-whatsapp
            data-msg="Oi, Tia Thaty! Queria consultar os valores do reforço escolar."
-           href="#">Consultar valores</a>
+           href="https://wa.me/5587988540760?text=Oi%2C%20Tia%20Thaty%21%20Queria%20consultar%20os%20valores%20do%20refor%C3%A7o%20escolar." target="_blank" rel="noopener">Consultar valores</a>
       </div>
+    </div>
+  </section>
+
+  <section class="steps" id="como-comecar">
+    <div class="wrap">
+      <h2>Como começar</h2>
+      <p class="section-lede">Simples, sem burocracia: em três passos seu filho já está aprendendo.</p>
+      <ol class="step-list">
+        <li class="step-card reveal">
+          <span class="step-number" aria-hidden="true">1</span>
+          <h3>Você me chama</h3>
+          <p>Manda uma mensagem no WhatsApp ou no Direct do Instagram.</p>
+        </li>
+        <li class="step-card reveal">
+          <span class="step-number" aria-hidden="true">2</span>
+          <h3>A gente conversa</h3>
+          <p>Você me conta sobre a série, as dificuldades e a rotina da criança.</p>
+        </li>
+        <li class="step-card reveal">
+          <span class="step-number" aria-hidden="true">3</span>
+          <h3>Montamos o plano</h3>
+          <p>Combinamos formato, horários e valores — e as aulas começam.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
   <section class="info-bar">
     <div class="wrap info-bar-inner">
       <div class="info-item">
-        <span aria-hidden="true">📍</span>
+        <span class="info-icon" aria-hidden="true">📍</span>
         <div>
           <strong>Atendimento presencial</strong>
-          <span>A domicílio, na Madalena e bairros próximos.</span>
+          <span class="info-text">A domicílio, na Madalena e bairros próximos.</span>
         </div>
       </div>
       <div class="info-item">
-        <span aria-hidden="true">🗓️</span>
+        <span class="info-icon" aria-hidden="true">🗓️</span>
         <div>
           <strong>Horários flexíveis</strong>
-          <span>Aulas adaptadas à rotina da sua família.</span>
+          <span class="info-text">Aulas adaptadas à rotina da sua família.</span>
         </div>
       </div>
       <div class="info-item">
-        <span aria-hidden="true">📱</span>
+        <span class="info-icon" aria-hidden="true">📱</span>
         <div>
           <strong>Vamos conversar?</strong>
-          <span>(87) 98854-0760 — WhatsApp ou Direct.</span>
+          <span class="info-text"><a href="tel:+5587988540760">(87) 98854-0760</a> — WhatsApp ou Direct.</span>
         </div>
       </div>
     </div>
@@ -180,7 +238,7 @@
       <p>Me chama no WhatsApp e conta um pouco sobre ele — a gente monta o plano juntos.</p>
       <a class="btn btn-primary btn-large" data-whatsapp
          data-msg="Oi, Tia Thaty! Vi o site e queria saber mais sobre o reforço escolar."
-         href="#">
+         href="https://wa.me/5587988540760?text=Oi%2C%20Tia%20Thaty%21%20Vi%20o%20site%20e%20queria%20saber%20mais%20sobre%20o%20refor%C3%A7o%20escolar." target="_blank" rel="noopener">
         <span aria-hidden="true">💬</span> Chamar no WhatsApp — (87) 98854-0760
       </a>
       <a class="cta-instagram" href="https://www.instagram.com/tiathaty_" target="_blank" rel="noopener">
@@ -198,7 +256,10 @@
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <img src="assets/logo.png" alt="Logo Reforço Escolar Tia Thaty" class="footer-logo" width="72" height="72">
+    <picture>
+      <source srcset="assets/logo-160.webp" type="image/webp">
+      <img src="assets/logo-160.png" alt="Logo Reforço Escolar Tia Thaty" class="footer-logo" width="72" height="72" loading="lazy" decoding="async">
+    </picture>
     <p class="footer-tagline">Aprender hoje, transformar o amanhã!</p>
     <a class="footer-social" href="https://www.instagram.com/tiathaty_" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
@@ -208,20 +269,20 @@
       </svg>
       @tiathaty_
     </a>
-    <p class="footer-copy">© <span id="year"></span> Tia Thaty · Reforço Escolar. Todos os direitos reservados.</p>
+    <p class="footer-copy">© <span id="year">2026</span> Tia Thaty · Reforço Escolar. Todos os direitos reservados.</p>
     <p class="footer-credit">Desenvolvido por <a href="https://t2solucoes.com/" target="_blank" rel="noopener">T2 Soluções em Tecnologia</a></p>
   </div>
 </footer>
 
 <a class="whatsapp-float" id="whatsappFloat" data-whatsapp
    data-msg="Oi, Tia Thaty! Vi o site e queria saber mais sobre o reforço escolar."
-   href="#" aria-label="Falar no WhatsApp">
-  <svg viewBox="0 0 32 32" width="28" height="28" fill="#fff">
+   href="https://wa.me/5587988540760?text=Oi%2C%20Tia%20Thaty%21%20Vi%20o%20site%20e%20queria%20saber%20mais%20sobre%20o%20refor%C3%A7o%20escolar." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="#fff" aria-hidden="true">
     <path d="M16.02 3C9.4 3 4.03 8.36 4.03 15c0 2.23.6 4.32 1.66 6.12L4 29l8.06-1.66A11.9 11.9 0 0 0 16.02 27C22.64 27 28 21.64 28 15S22.64 3 16.02 3Zm0 21.7c-1.87 0-3.6-.5-5.1-1.38l-.37-.22-4.78.99 1.02-4.66-.24-.38A9.63 9.63 0 0 1 5.35 15c0-5.87 4.8-10.66 10.67-10.66 5.87 0 10.65 4.8 10.65 10.66S21.9 24.7 16.02 24.7Z"/>
     <path d="M21.6 17.66c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.22-.65.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.79-1.68-2.09-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.65-.94-2.26-.25-.6-.5-.5-.68-.51h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.58-.35Z"/>
   </svg>
 </a>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

@@ -19,18 +19,77 @@ function setupMobileNav() {
   const nav = document.getElementById("mainNav");
   if (!toggle || !nav) return;
 
-  toggle.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("is-open");
+  const setOpen = (isOpen) => {
+    nav.classList.toggle("is-open", isOpen);
+    toggle.classList.toggle("is-open", isOpen);
     toggle.setAttribute("aria-expanded", String(isOpen));
-  });
+    toggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+  };
+
+  toggle.addEventListener("click", () => setOpen(!nav.classList.contains("is-open")));
 
   // Fecha o menu ao clicar em um link
   nav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("is-open");
-      toggle.setAttribute("aria-expanded", "false");
-    });
+    link.addEventListener("click", () => setOpen(false));
   });
+
+  // Fecha com Esc ou clique fora do menu
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && nav.classList.contains("is-open")) {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+  document.addEventListener("click", (event) => {
+    if (nav.classList.contains("is-open") && !nav.contains(event.target) && !toggle.contains(event.target)) {
+      setOpen(false);
+    }
+  });
+}
+
+// ============ Destaca o link da seção visível ============
+function setupActiveNav() {
+  const links = document.querySelectorAll('.main-nav a[href^="#"]');
+  const sections = [...links]
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+  if (!sections.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        links.forEach((link) => {
+          const isActive = link.getAttribute("href") === `#${entry.target.id}`;
+          link.classList.toggle("is-active", isActive);
+          if (isActive) link.setAttribute("aria-current", "true");
+          else link.removeAttribute("aria-current");
+        });
+      });
+    },
+    { rootMargin: "-45% 0px -50% 0px" }
+  );
+  sections.forEach((section) => observer.observe(section));
+}
+
+// ============ Animação suave ao rolar ============
+function setupReveal() {
+  const items = document.querySelectorAll(".reveal");
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!items.length || prefersReduced || !("IntersectionObserver" in window)) return;
+
+  document.documentElement.classList.add("js-reveal");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.15 }
+  );
+  items.forEach((item) => observer.observe(item));
 }
 
 // ============ Botão flutuante do WhatsApp ============
@@ -60,6 +119,8 @@ function setupFooterYear() {
 document.addEventListener("DOMContentLoaded", () => {
   setupWhatsappLinks();
   setupMobileNav();
+  setupActiveNav();
+  setupReveal();
   setupFloatingButton();
   setupFooterYear();
 });
