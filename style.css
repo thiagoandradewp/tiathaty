@@ -365,7 +365,7 @@ a:focus-visible, button:focus-visible{outline:3px solid var(--gold-dark); outlin
 .cta-instagram:hover{border-color:var(--gold); color:var(--gold-dark);}
 
 /* ============ Footer ============ */
-.site-footer{background:var(--navy); color:#C9D4EC; padding:32px 0;}
+.site-footer{background:var(--navy); color:#C9D4EC; padding:32px 0 0;}
 .footer-inner{text-align:center;}
 .footer-logo{width:72px; height:72px; object-fit:contain; margin:0 auto 12px; display:block;}
 .footer-tagline{
@@ -384,9 +384,24 @@ a:focus-visible, button:focus-visible{outline:3px solid var(--gold-dark); outlin
 }
 .footer-social:hover{color:var(--gold);}
 .footer-copy{font-size:.85rem; margin:0 0 .5rem;}
-.footer-credit{font-size:.8rem; margin:0; color:#8FA0C4;}
-.footer-credit a{color:#C9D4EC; text-decoration:underline; text-underline-offset:2px;}
-.footer-credit a:hover{color:var(--gold);}
+.footer-credit{
+  background:#0E1835;
+  margin-top:32px;
+  padding:14px 16px;
+  display:flex; justify-content:center;
+}
+.credit-pill{
+  margin:0;
+  font-size:.82rem;
+  color:#C9D4EC;
+  padding:.45em 1.1em;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,0.14);
+  background:rgba(255,255,255,0.04);
+}
+.credit-heart{color:#E5484D;}
+.credit-pill a{color:#fff; font-weight:800; text-decoration:underline; text-underline-offset:2px;}
+.credit-pill a:hover{color:var(--gold);}
 
 /* ============ WhatsApp float ============ */
 .whatsapp-float{
