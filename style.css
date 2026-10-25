@@ -385,19 +385,21 @@ a:focus-visible, button:focus-visible{outline:3px solid var(--gold-dark); outlin
 .footer-social:hover{color:var(--gold);}
 .footer-copy{font-size:.85rem; margin:0 0 .5rem;}
 .footer-credit{
-  background:#0E1835;
+  background:#121212;
   margin-top:32px;
   padding:14px 16px;
-  display:flex; justify-content:center;
+  display:flex; justify-content:center; align-items:center;
+  text-align:center;
 }
 .credit-pill{
-  margin:0;
+  display:inline-block;
+  margin:0 auto;
   font-size:.82rem;
-  color:#C9D4EC;
+  color:#E7ECF8;
   padding:.45em 1.1em;
   border-radius:999px;
-  border:1px solid rgba(255,255,255,0.14);
-  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(63,167,114,0.45);
+  background:#123524;
 }
 .credit-heart{color:#E5484D;}
 .credit-pill a{color:#fff; font-weight:800; text-decoration:underline; text-underline-offset:2px;}
